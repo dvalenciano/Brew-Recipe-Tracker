@@ -16,7 +16,11 @@ This project is to show the understanding of fullstack web development from star
 
 The idea behind this project is to create a full stack application that will store recipes that brewers create for later use or expansion and tracking. As a brewer there is a good amount of time from the actual brew date to when a beer has finished fermenting and is ready for consumption and that time many details can be forgtten. This application is aimed at tracking those details and recipes for brewers to access with ease and confidence of the data.
 
-You can access the App by following this [link!]()
+**_Getting Started_**
+
+You can access the App by following this [link!](). Here you will find the early stages of this working application.
+
+You can find how I thought through and planned for this project using this Trello [link!](https://trello.com/b/VM25R4Zm/brew-recipes)
 
 **_Technologies Used_**
 
@@ -33,13 +37,7 @@ Entity Relationship Diagram
 ![Entity Relationship Diagram](ERD.png)
 
 Component Hiearchy Diagram
-![Component Hiearchy Diagram](HAD.png)
-
-Mock Up Main
-![Mock Up Main](Main_Component.png)
-
-Mock Up Post
-![Mock Up Post](Post.png)
+![Component Hiearchy Diagram](hierarchy.png)
 
 **_Future Updates_**
 
