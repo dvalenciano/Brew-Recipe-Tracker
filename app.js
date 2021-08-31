@@ -16,6 +16,9 @@ app.use(logger('dev'))
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 
+app.get('/', (req, res) => {
+  res.send({ msg: 'Server Running' })
+})
 
 
 
