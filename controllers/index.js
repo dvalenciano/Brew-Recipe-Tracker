@@ -35,4 +35,5 @@ const createRecipe = async (req, res)=>{
 module.exports = {
   createComment,
   createImage,
+  createRecipe,
 }
