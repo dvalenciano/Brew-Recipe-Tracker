@@ -32,8 +32,38 @@ const createRecipe = async (req, res)=>{
   }
 }
 
+const getComment = async (req, res)=>{
+  try {
+    const comments = await Comment.find()
+    return res.status(200).json({comments})
+  } catch (error) {
+    return res.status(201).json({recipe})
+  }
+}
+
+const getImage = async (req,res)=>{
+  try {
+    const images = await Image.find()
+    return res.status(200).json({images})
+  } catch (error) {
+    
+  }
+}
+
+const getRecipe = async (req, res)=>{
+  try {
+    const recipes = await Recipe.find()
+    return res.status(200).json({recipes})
+  } catch (error) {
+    
+  }
+}
+
 module.exports = {
   createComment,
   createImage,
   createRecipe,
+  getImage,
+  getComment,
+  getRecipe,
 }
