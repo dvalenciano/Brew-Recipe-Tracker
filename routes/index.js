@@ -10,4 +10,10 @@ router.post('/images', controllers.creatImage)
 
 router.post('/comments', controllers.createComment)
 
+router.get('/recipes', controllers.getRecipe)
+
+router.get('/images', controllers.getImage)
+
+router.get('/conmments', controllers.getComment)
+
 module.exports = router;
