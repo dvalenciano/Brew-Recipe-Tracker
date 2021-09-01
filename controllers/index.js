@@ -59,6 +59,15 @@ const getRecipe = async (req, res)=>{
   }
 }
 
+const getRecipeCategory = async (req, res)=>{
+  try {
+    const recipes = await Recipe.find({category:req.params.category})
+    return res.status(200).json({recipes})
+  } catch (error) {
+    
+  }
+}
+
 const getCommentById = async (req, res)=>{
   try {
     const { id } = req.params
@@ -150,4 +159,5 @@ module.exports = {
   deleteComment,
   deleteImage,
   deleteRecipe,
+  getRecipeCategory
 }

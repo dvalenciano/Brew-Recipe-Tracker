@@ -11,6 +11,9 @@ const Comment = new Schema(
     text: {
       type: String,
       required: true
+    },
+    recipe_id: {
+      type:Schema.Types.ObjectId, ref: 'recipe_id'
     }
   },
   { timestamp: true }

@@ -16,16 +16,18 @@ router.get('/images', controllers.getImage)
 
 router.get('/comments', controllers.getComment)
 
-router.get('/comments', controllers.getCommentById)
+router.get('/comments/:id', controllers.getCommentById)
 
-router.get('/images', controllers.getImageById)
+router.get('/images/:id', controllers.getImageById)
 
-router.get('/recipes', controllers.getRecipeById)
+router.get('/recipes/:id', controllers.getRecipeById)
 
-router.delete('/comments', controllers.deleteComment)
+router.delete('/comments/:id', controllers.deleteComment)
 
-router.delete('/images', controllers.deleteImage)
+router.delete('/images/:id', controllers.deleteImage)
 
-router.delete('/recipes', controllers.deleteRecipe)
+router.delete('/recipes/:id', controllers.deleteRecipe)
+
+router.get('/recipes/:category', controllers.getRecipeCategory)
 
 module.exports = router;
