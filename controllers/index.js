@@ -98,6 +98,45 @@ const getRecipeById = async (req, res)=>{
   }
 }
 
+const deleteComment = async (req, res) => {
+  try {
+      const { id } = req.params;
+      const deleted = await Comment.findByIdAndDelete(id)
+      if (deleted) {
+          return res.status(200).send("Comment deleted");
+      }
+      throw new Error("Comment not found");
+  } catch (error) {
+      return res.status(500).send(error.message);
+  }
+}
+
+const deleteImage = async (req, res) => {
+  try {
+      const { id } = req.params;
+      const deleted = await Image.findByIdAndDelete(id)
+      if (deleted) {
+          return res.status(200).send("Image deleted");
+      }
+      throw new Error("Image not found");
+  } catch (error) {
+      return res.status(500).send(error.message);
+  }
+}
+
+const deleteRecipe = async (req, res) => {
+  try {
+      const { id } = req.params;
+      const deleted = await Recipe.findByIdAndDelete(id)
+      if (deleted) {
+          return res.status(200).send("Recipe deleted");
+      }
+      throw new Error("Recipe not found");
+  } catch (error) {
+      return res.status(500).send(error.message);
+  }
+}
+
 module.exports = {
   createComment,
   createImage,
@@ -107,5 +146,8 @@ module.exports = {
   getRecipe,
   getCommentById,
   getImageById,
-  getRecipeById
+  getRecipeById,
+  deleteComment,
+  deleteImage,
+  deleteRecipe,
 }
