@@ -59,6 +59,45 @@ const getRecipe = async (req, res)=>{
   }
 }
 
+const getCommentById = async (req, res)=>{
+  try {
+    const { id } = req.params
+    const comment = await Comment.findById(id)
+    if (comment){
+      return res.status(200).json({comment})
+    }
+    return res.status(404).send({plant})
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const getImageById = async (req, res)=>{
+  try {
+    const {id} = req.params
+    const image = await Image.findById(id)
+    if (image){
+      return res.status(200).json({image})
+    }
+    return res.status(404).send({image})
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const getRecipeById = async (req, res)=>{
+  try {
+    const {id} = req.params
+    const recipe = await Recipe.findById(id)
+    if (recipe){
+      return res.status(200).json({recipe})
+    }
+    return res.status(404).send({recipe})
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createComment,
   createImage,
@@ -66,4 +105,7 @@ module.exports = {
   getImage,
   getComment,
   getRecipe,
+  getCommentById,
+  getImageById,
+  getRecipeById
 }
