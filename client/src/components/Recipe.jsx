@@ -13,4 +13,4 @@ console.log(props)
   )
 }
 
-export default Article
+export default Recipe
