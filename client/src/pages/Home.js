@@ -6,18 +6,20 @@ import {BASE_URL} from '../globals'
 export default function Home() {
   const [category, setCategories] = useState([])
 
-  useEffect (() => {
-    async function getCategories() {}
-  },[])
+  
 
   const getCategories = async () => {
     const res = await axios.get(
       `${BASE_URL}/recipes/:category`
     ) 
-   setCategories(res.data.results)
-    console.log(getCategories)
+    console.log(res)
+    setCategories(res.data.results)
+    
   }
 
+  useEffect (() => {
+    async function getCategories() {}
+  },[])
   
 
   return (
