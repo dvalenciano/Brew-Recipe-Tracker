@@ -1,5 +1,4 @@
 const Comment = require('../models/comments')
-const Image = require('../models/images')
 const Recipe = require('../models/recipes')
 
 const createComment = async (req, res)=>{

@@ -8,17 +8,14 @@ export default function Home() {
 
   
 
-  const getCategories = async () => {
-    const res = await axios.get(
-      `${BASE_URL}/recipes/:category`
-    ) 
-    console.log(res)
-    setCategories(res.data.results)
-    
-  }
 
   useEffect (() => {
-    async function getCategories() {}
+    async function getCategories() {
+      const res = await axios.get(`${BASE_URL}/recipes/:category`)
+      console.log(res)
+      setCategories(res.data.results)
+    }
+    getCategories()
   },[])
   
 
@@ -27,7 +24,8 @@ export default function Home() {
       <div className="recipes">
         <h2>Categories</h2>
         <section className="container-grid">
-          {categories.map((category_result) => (
+          
+          {category.map((category_result) => (
             <Category key={category_result.id} {...category_result}/>
           ))}
         </section>
