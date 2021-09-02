@@ -5,7 +5,7 @@ import { BASE_URL } from '../globals'
 const ForumList = () => {
   const [comments, setcomments] = useState([])
   useEffect(() => {
-    getcomments()
+    getComments()
   }, [])
 
   async function getComments() {
