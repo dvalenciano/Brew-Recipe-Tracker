@@ -28,6 +28,7 @@ export default function Home() {
           {category.map((category_result) => (
             <Category key={category_result.id} {...category_result}/>
           ))}
+          <Category />
         </section>
       </div>
     </div>

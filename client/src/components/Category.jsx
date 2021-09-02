@@ -5,9 +5,9 @@ const Category= (props) => {
 console.log(props)
   return (
     <div className='category'>
-      <h2>{props.category.name}</h2>
-      <h4>{props.category.category}</h4>
-      <p>{props.category.content}</p>
+      <h2>{props.name}</h2>
+      <h4>{props.category}</h4>
+      <p>{props.content}</p>
       <Comment />
     </div>
   )

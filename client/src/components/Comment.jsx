@@ -1,6 +1,9 @@
 import React from 'react'
 
 const Comment = () => {
+
+  
+
   return (
     <div className='comment'>
       <input type="text" className='name-input' /> 
