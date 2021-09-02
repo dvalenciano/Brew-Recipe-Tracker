@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect (() => {
     async function getCategories() {
-      const res = await axios.get(`${BASE_URL}/recipes/:category`)
+      const res = await axios.get(`${BASE_URL}/recipes`)
       console.log(res)
       setCategories(res.data.results)
     }
@@ -24,11 +24,10 @@ export default function Home() {
       <div className="recipes">
         <h2>Categories</h2>
         <section className="container-grid">
-          
+        <Category />
           {category.map((category_result) => (
             <Category key={category_result.id} {...category_result}/>
           ))}
-          <Category />
         </section>
       </div>
     </div>
