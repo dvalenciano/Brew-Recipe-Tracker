@@ -18,7 +18,7 @@ const createRecipe = async (req, res)=>{
     await recipe.save()
     return res.status(201).json({recipe})
   } catch (error) {
-    
+    return res.status(500).send(error.message)
   }
 }
 
@@ -36,7 +36,7 @@ const getRecipe = async (req, res)=>{
     const recipes = await Recipe.find()
     return res.status(200).json({recipes})
   } catch (error) {
-    
+    return res.status(500).send(error.message)
   }
 }
 
@@ -45,7 +45,7 @@ const getRecipeCategory = async (req, res)=>{
     const recipes = await Recipe.find({category:req.params.category})
     return res.status(200).json({recipes})
   } catch (error) {
-    
+    return res.status(500).send(error.message)
   }
 }
 
