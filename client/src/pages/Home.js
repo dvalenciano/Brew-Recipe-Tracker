@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+import RecipePost from '../components/RecipePost'
 import RecipeList from '../components/RecipeList'
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
       <button onClick={chooseCategory} name="Other">
         Other
       </button>
-      {/* <RecipePost category={category} /> */}
+      <RecipePost category={category} />
       <RecipeList category={category} />
     </div>
   )
