@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ForumList from '../components/ForumList'
+import ForumPost from '../components/ForumPost'
 
 export default function Forum() {
   const [category, setCategory] = useState('IPA')
@@ -10,6 +11,7 @@ export default function Forum() {
 
   return (
     <div>
+      <ForumPost />
       <ForumList />
     </div>
   )

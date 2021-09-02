@@ -10,47 +10,32 @@ const CommentPost = () => {
   })
 
   async function postComment(formdata) {
-    const res = await axios.post(`${BASE_URL}/recipes`, formdata)
+    const res = await axios.post(`${BASE_URL}/comments`, formdata)
   }
   const handleChange = (e) => {
-    setRecipe({ comment: e.target.value })
+    setComment({ newComment: e.target.value })
   }
   return (
     <div>
       <h3>New Recipe</h3>
       <input
         type="text"
-        placeholder="name"
+        placeholder="your thoughts"
         name="name"
         onChange={(e) => {
           handleChange(e)
         }}
       />
-      <input
-        type="text"
-        placeholder="category"
-        name="category"
-        onChange={(e) => {
-          handleChange(e)
-        }}
-      />
-      <input
-        type="text"
-        placeholder="content"
-        name="content"
-        onChange={(e) => {
-          handleChange(e)
-        }}
-      />
+
       <button
         onClick={() => {
-          postRecipe(newRecipe)
+          postComment(newComment)
         }}
       >
-        Post
+        Add Thought
       </button>
     </div>
   )
 }
 
-export default RecipePost
+export default CommentPost
