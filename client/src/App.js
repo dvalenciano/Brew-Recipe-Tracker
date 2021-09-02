@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { Route, Switch } from 'react-router-dom'
-import Recipe from './components/Recipe'
+import Category from './components/Category'
 import Header from './components/Header'
 import Home from './pages/Home'
 
@@ -12,7 +12,7 @@ function App() {
      <main>
        <Switch>
         <Route exact path='/' component={Home}/>
-        <Route path='/recipes' component={Recipe}/>
+        <Route path='/recipes' component={Category}/>
         
        </Switch>
      </main>

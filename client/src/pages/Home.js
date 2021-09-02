@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Recipe from '../components/Recipe'
+import Recipe from '../components/Category'
 import axios from 'axios'
 import {BASE_URL} from '../globals'
 
@@ -14,7 +14,7 @@ export default function Home() {
 
   const getCategories = async () => {
     const res = await axios.get(
-      `${BASE_URL}/recipes`
+      `${BASE_URL}/recipes/:category`
     ) 
    setCategories(res.data.results)
     console.log(getCategories)
@@ -23,10 +23,10 @@ export default function Home() {
   return (
     <div>
       <div className="recipes">
-        <h2>Recipes</h2>
+        <h2>Categories</h2>
         <section className="container-grid">
-          {recipes.map((recipe_result) => (
-            <Recipe key={recipe_result.id} {...recipe_result}/>
+          {categories.map((category_result) => (
+            <Recipe key={category_result.id} {...category_result}/>
           ))}
         </section>
       </div>
