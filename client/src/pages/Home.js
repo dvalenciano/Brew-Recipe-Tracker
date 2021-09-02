@@ -1,41 +1,28 @@
 import React, { useState, useEffect } from 'react'
-import Category from '../components/Category'
 import axios from 'axios'
-import {BASE_URL} from '../globals'
+import { BASE_URL } from '../globals'
+import RecipeList from '../components/RecipeList'
 
 export default function Home() {
-  const [category, setCategories] = useState([])
+  const [category, setCategory] = useState('IPA')
 
-  
-
-
-  useEffect (() => {
-    async function getCategories() {
-      const res = await axios.get(`${BASE_URL}/recipes`)
-      console.log(res)
-      setCategories(res.data.results)
-    }
-    getCategories()
-  },[])
-  
+  // useEffect (() => {
+  //   async function getCategories() {
+  //     const res = await axios.get(`${BASE_URL}/recipes`)
+  //     console.log(res)
+  //     setCategories(res.data.results)
+  //   }
+  //   getCategories()
+  // },[])
 
   return (
     <div>
-      <div className="recipes">
-        <h2>Categories</h2>
-        <section className="container-grid">
-        <Category />
-          {category.map((category_result) => (
-            <Category key={category_result.id} {...category_result}/>
-          ))}
-        </section>
-      </div>
+      <button>IPA</button>
+      <button>Pale Ale</button>
+      <button>Stout</button>
+      <button>Other</button>
+
+      <RecipeList category={category} />
     </div>
   )
-
-
-
-
-
-
 }

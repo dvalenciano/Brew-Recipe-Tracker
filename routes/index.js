@@ -8,9 +8,9 @@ router.post('/recipes', controllers.createRecipe)
 
 router.post('/comments', controllers.createComment)
 
-router.get('/recipes', controllers.getRecipe)
+router.get('/recipes', controllers.getRecipes)
 
-router.get('/comments', controllers.getComment)
+router.get('/comments', controllers.getComments)
 
 router.get('/comments/:id', controllers.getCommentById)
 
@@ -20,6 +20,6 @@ router.delete('/comments/:id', controllers.deleteComment)
 
 router.delete('/recipes/:id', controllers.deleteRecipe)
 
-router.get('/recipes/:category', controllers.getRecipeCategory)
+router.get('/recipes/categories/:category', controllers.getRecipeCategory)
 
 module.exports = router;
