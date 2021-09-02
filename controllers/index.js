@@ -12,16 +12,6 @@ const createComment = async (req, res)=>{
   }
 }
 
-const createImage = async (req, res)=>{
-  try {
-    const image = await new Image(req.body)
-    await image.save()
-    return res.status(201).json({image,})
-  } catch (error) {
-    return res.status(500).json({ error: error.message })
-  }
-}
-
 const createRecipe = async (req, res)=>{
   try {
     const recipe = await new Recipe(req.body)
@@ -38,15 +28,6 @@ const getComment = async (req, res)=>{
     return res.status(200).json({comments})
   } catch (error) {
     return res.status(201).json({recipe})
-  }
-}
-
-const getImage = async (req,res)=>{
-  try {
-    const images = await Image.find()
-    return res.status(200).json({images})
-  } catch (error) {
-    
   }
 }
 
@@ -81,19 +62,6 @@ const getCommentById = async (req, res)=>{
   }
 }
 
-const getImageById = async (req, res)=>{
-  try {
-    const {id} = req.params
-    const image = await Image.findById(id)
-    if (image){
-      return res.status(200).json({image})
-    }
-    return res.status(404).send({image})
-  } catch (error) {
-    return res.status(500).send(error.message)
-  }
-}
-
 const getRecipeById = async (req, res)=>{
   try {
     const {id} = req.params
@@ -120,19 +88,6 @@ const deleteComment = async (req, res) => {
   }
 }
 
-const deleteImage = async (req, res) => {
-  try {
-      const { id } = req.params;
-      const deleted = await Image.findByIdAndDelete(id)
-      if (deleted) {
-          return res.status(200).send("Image deleted");
-      }
-      throw new Error("Image not found");
-  } catch (error) {
-      return res.status(500).send(error.message);
-  }
-}
-
 const deleteRecipe = async (req, res) => {
   try {
       const { id } = req.params;
@@ -148,16 +103,12 @@ const deleteRecipe = async (req, res) => {
 
 module.exports = {
   createComment,
-  createImage,
   createRecipe,
-  getImage,
   getComment,
   getRecipe,
   getCommentById,
-  getImageById,
   getRecipeById,
   deleteComment,
-  deleteImage,
   deleteRecipe,
   getRecipeCategory
 }
