@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import RecipePost from '../components/RecipePost'
-import RecipeList from '../components/RecipeList'
+import ForumList from '../components/ForumList'
 
-export default function Home() {
+export default function Forum() {
   const [category, setCategory] = useState('IPA')
 
   function chooseCategory(e) {
@@ -11,20 +10,7 @@ export default function Home() {
 
   return (
     <div>
-      <button onClick={chooseCategory} name="IPA">
-        IPA
-      </button>
-      <button onClick={chooseCategory} name="Pale Ale">
-        Pale Ale
-      </button>
-      <button onClick={chooseCategory} name="Stout">
-        Stout
-      </button>
-      <button onClick={chooseCategory} name="Other">
-        Other
-      </button>
-      <RecipePost category={category} />
-      <RecipeList category={category} />
+      <ForumList />
     </div>
   )
 }
