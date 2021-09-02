@@ -4,20 +4,20 @@ import axios from 'axios'
 import {BASE_URL} from '../globals'
 
 export default function Home() {
-  const [recipes, setRecipes] = useState([])
+  const [category, setCategories] = useState([])
 
   useEffect (() => {
     if (!searched) {
-      getRecipes()
+      getCategories()
     }
   },[])
 
-  const getRecipes = async () => {
+  const getCategories = async () => {
     const res = await axios.get(
       `${BASE_URL}/recipes`
     ) 
-   setRecipes(res.data.results)
-    console.log(getRecipes)
+   setCategories(res.data.results)
+    console.log(getCategories)
   }
 
   return (
