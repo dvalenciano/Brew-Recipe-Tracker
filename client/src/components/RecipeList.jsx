@@ -14,6 +14,10 @@ const RecipeList = ({ category }) => {
   }
   console.log(recipes)
 
+  async function removeRecipe(id) {
+    const res = await axios.delete(`${BASE_URL}/recipes/${id}`)
+  }
+
   return (
     <div className="recipelist">
       <h2>{category} Recipes</h2>
@@ -23,6 +27,13 @@ const RecipeList = ({ category }) => {
           <div className="recipeItem" key={recipe._id}>
             <h4>{recipe.name}</h4>
             <p>{recipe.content}</p>
+            <button
+              onClick={() => {
+                removeRecipe(recipe._id)
+              }}
+            >
+              Delete Recipe
+            </button>
           </div>
         )
       })}

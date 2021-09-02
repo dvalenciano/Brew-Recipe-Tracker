@@ -4,16 +4,13 @@ const Schema = mongoose.Schema
 
 const commentSchema = new Schema(
   {
-    name: {
-      type: String,
-      required: true
-    },
     content: {
       type: String,
       required: true
     },
     recipe_id: {
-      type:Schema.Types.ObjectId, ref: 'recipe_id'
+      type: Schema.Types.ObjectId,
+      ref: 'recipe_id'
     }
   },
   { timestamp: true }
