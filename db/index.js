@@ -18,5 +18,3 @@ mongoose
 const db = mongoose.connection
 
 module.exports = db
-
-// process.env.NODE_ENV === 'production'?process.env.MONGODB_URI:
