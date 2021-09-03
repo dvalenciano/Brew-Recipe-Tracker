@@ -7,7 +7,7 @@ let dbUrl =
     : 'mongodb://127.0.0.1:27017/brewDB'
 
 mongoose
-  .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
+  .connect(dbUrl, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(() => {
     console.log('Successfully connected to MongoDB.')
   })
