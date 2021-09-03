@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
-let MONGODB_URI = 'mongodb://127.0.0.1:27017/brewDB'
+let dbUrl =
+  process.env.NODE_ENV === 'production'
+    ? process.env.MONGODB_URI
+    : 'mongodb://127.0.0.1:27017/brewDB'
 
 mongoose
   .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
@@ -14,6 +18,5 @@ mongoose
 const db = mongoose.connection
 
 module.exports = db
-
 
 // process.env.NODE_ENV === 'production'?process.env.MONGODB_URI:
