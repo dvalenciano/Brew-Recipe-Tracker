@@ -10,7 +10,7 @@ export default function Forum() {
   }
 
   return (
-    <div>
+    <div className="forumHome">
       <ForumPost />
       <ForumList />
     </div>

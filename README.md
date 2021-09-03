@@ -33,6 +33,8 @@ You can find how I thought through and planned for this project using this Trell
 
 Below are snippets of the early workings that indicate the beginning level of building a can online application using a fullstack method
 
+![Home Screen](hops.png)
+
 Entity Relationship Diagram
 ![Entity Relationship Diagram](ERD.png)
 
@@ -43,5 +45,12 @@ Component Hiearchy Diagram
 
 - [ ] API to import recipes from other brewing sources
 - [ ] Update to include user profiles
+- [ ] Update for account authorization
 
 **_Credits_**
+
+[W3 Schools](https://www.w3schools.com/howto)
+
+[Maximilian Schwarzmuller](https://www.youtube.com/watch?v=Zujt4GNIEC8)
+
+[Flexbox Froggy](https://flexboxfroggy.com/)

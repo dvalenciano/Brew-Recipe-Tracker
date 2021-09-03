@@ -8,13 +8,21 @@
   font-weight: bolder;
 }
 .App {
-  background-color: skyblue;
   background-image: url(https://images.unsplash.com/photo-1600956306204-d6a5c6aab472?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.forumHome {
+  background-image: url(https://images.unsplash.com/photo-1600347992445-98410acd88a3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YnJld2luZyUyMG9mJTIwYmVlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .homebutton {
   display: inline;
   justify-content: center;
