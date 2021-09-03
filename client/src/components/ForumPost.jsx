@@ -17,10 +17,10 @@ const CommentPost = () => {
   }
   return (
     <div>
-      <h3>New Recipe</h3>
+      <h3>Your Thought</h3>
       <input
         type="text"
-        placeholder="your thoughts"
+        placeholder="your thoughts here"
         name="name"
         onChange={(e) => {
           handleChange(e)

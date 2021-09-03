@@ -11,16 +11,16 @@ export default function Home() {
 
   return (
     <div>
-      <button onClick={chooseCategory} name="IPA">
+      <button className="homebutton" onClick={chooseCategory} name="IPA">
         IPA
       </button>
-      <button onClick={chooseCategory} name="Pale Ale">
+      <button className="homebutton" onClick={chooseCategory} name="Pale Ale">
         Pale Ale
       </button>
-      <button onClick={chooseCategory} name="Stout">
+      <button className="homebutton" onClick={chooseCategory} name="Stout">
         Stout
       </button>
-      <button onClick={chooseCategory} name="Other">
+      <button className="homebutton" onClick={chooseCategory} name="Other">
         Other
       </button>
       <RecipePost category={category} />

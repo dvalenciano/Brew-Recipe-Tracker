@@ -28,6 +28,7 @@ const RecipeList = ({ category }) => {
             <h4>{recipe.name}</h4>
             <p>{recipe.content}</p>
             <button
+              className="recipeButton"
               onClick={() => {
                 removeRecipe(recipe._id)
               }}
