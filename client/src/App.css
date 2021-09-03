@@ -11,11 +11,16 @@
   background-size: cover;
 }
 .homebutton {
+  align-items: center;
   margin: 10px;
   background-color: goldenrod;
+  border-radius: 10px;
+  border: 1px solid white;
 }
 
 .navLink {
   display: flex;
-  flex: inherit;
+  justify-content: flex-end;
+  color: aliceblue;
+  padding: 12px;
 }
