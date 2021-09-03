@@ -2,6 +2,11 @@
   border: 3px solid black;
   border-bottom: none;
 }
+
+.commentList {
+  color: azure;
+  font-weight: bolder;
+}
 .App {
   background-color: skyblue;
   background-image: url(https://images.unsplash.com/photo-1600956306204-d6a5c6aab472?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
@@ -11,16 +16,18 @@
   background-size: cover;
 }
 .homebutton {
-  align-items: center;
+  display: inline;
+  justify-content: center;
   margin: 10px;
   background-color: goldenrod;
   border-radius: 10px;
   border: 1px solid white;
+  size: 25px;
 }
 
 .navLink {
   display: flex;
   justify-content: flex-end;
-  color: aliceblue;
+  color: white;
   padding: 12px;
 }
